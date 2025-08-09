@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parvaiz Mansoori - Resume</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    header {
+      background-color: #222;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+
+    .download-btn {
+      background-color: #0073e6;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .download-btn:hover {
+      background-color: #005bb5;
+    }
+
+    main {
+      flex: 1;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Desktop PDF Embed */
+    .pdf-container {
+      flex: 1;
+      width: 100%;
+      max-width: 900px;
+      height: 100%;
+      border: none;
+    }
+
+    /* Mobile handling: hide iframe, show instructions */
+    @media (max-width: 768px) {
+      .pdf-container {
+        display: none;
+      }
+      .mobile-note {
+        margin-top: 20px;
+        font-size: 1rem;
+        text-align: center;
+        max-width: 600px;
+        color: #444;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Parvaiz Mansoori - Resume
+  </header>
+  <main>
+    <a class="download-btn" href="resume.pdf" target="_blank">📄 View / Download PDF</a>
+
+    <!-- Desktop Embed -->
+    <iframe class="pdf-container" src="resume.pdf"></iframe>
+
+    <!-- Mobile Note -->
+    <p class="mobile-note">
+      On mobile, tap the button above to open the resume in your PDF viewer for best readability.
+    </p>
+  </main>
+</body>
+</html>
